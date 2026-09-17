@@ -11,7 +11,7 @@ Elaborate, teaching-level notes on system design, one file per topic in the **"E
 | 1 | Networking Essentials | [networking-essentials.md](networking-essentials.md) | Hello Interview | ✅ Complete | ~7.2/10 |
 | 2 | API Design | [api-design.md](api-design.md) | Hello Interview | ✅ Complete | ~7.5/10 |
 | 3 | Data Modeling | [data-modeling.md](data-modeling.md) | Hello Interview | ✅ Complete | ~6.8/10 |
-| 4 | Database Indexing | — | Hello Interview | ⬜ Next | — |
+| 4 | Database Indexing | [database-indexing.md](database-indexing.md) | Hello Interview | ✅ Complete | ~7.3/10 |
 | 5 | Caching | — | Hello Interview | ⬜ Todo | — |
 | 6 | Sharding | — | Hello Interview | ⬜ Todo | — |
 | 7 | Consistent Hashing | — | Hello Interview | ⬜ Todo | — |

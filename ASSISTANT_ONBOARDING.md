@@ -117,8 +117,8 @@ Source: Hello Interview "System Design in a Hurry" → the **Foundations** seque
 | 1 | Networking Essentials | ✅ Complete | `system-design/networking-essentials.md` | ~7.2/10 |
 | 2 | API Design | ✅ Complete | `system-design/api-design.md` | ~7.5/10 |
 | 3 | Data Modeling | ✅ Complete | `system-design/data-modeling.md` | ~6.8/10 |
-| 4 | Database Indexing | ⬜ Next | — | — |
-| 5 | Caching | ⬜ Todo | — | — |
+| 4 | Database Indexing | ✅ Complete | `system-design/database-indexing.md` | ~7.3/10 |
+| 5 | Caching | ⬜ Next | — | — |
 | 6 | Sharding | ⬜ Todo | — | — |
 | 7 | Consistent Hashing | ⬜ Todo | — | — |
 | 8 | CAP Theorem | ⬜ Todo | — | — |
@@ -128,6 +128,7 @@ Source: Hello Interview "System Design in a Hurry" → the **Foundations** seque
 - Networking: DNS TTL & failover, circuit-breaker state machine, latency physics (speed of light in fiber ≈ 56ms NY↔London RTT).
 - API Design: nested-path-vs-query rule (required→path, optional→query), REST verbs-in-path, pagination page-size cap, PATCH set-vs-accumulate idempotency, GraphQL N+1 + DataLoader.
 - Data Modeling: system-generated PK = *stability* not just uniqueness, 1:1 → merge tables, composite-index (filter col first, sort col second), shard-key cost (cross-shard timelines), time-range = hot-shard anti-pattern.
+- Database Indexing: **LSM read mechanisms by name** (bloom filters + compaction); **B-tree updates in place = good / LSM append-only = bad** for repeated same-row updates (don't reverse); **delete = a write → disk goes up; tombstone problem is a *read* cost**; **selectivity (query) vs cardinality (column)** — partial index for skew; answer *every* sub-part + write the exact index.
 - Terminology I once slipped on: **graph database (nodes/edges storage) ≠ GraphQL (API query language)**.
 
 **Related study (not in this repo, for context):** I completed the Amazon Dynamo paper (SOSP 2007) and am partway through the Cassandra paper (LADIS 2009). Cross-reference these when relevant.
