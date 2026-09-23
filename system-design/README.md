@@ -12,7 +12,7 @@ Elaborate, teaching-level notes on system design, one file per topic in the **"E
 | 2 | API Design | [api-design.md](api-design.md) | Hello Interview | ✅ Complete | ~7.5/10 |
 | 3 | Data Modeling | [data-modeling.md](data-modeling.md) | Hello Interview | ✅ Complete | ~6.8/10 |
 | 4 | Database Indexing | [database-indexing.md](database-indexing.md) | Hello Interview | ✅ Complete | ~7.3/10 |
-| 5 | Caching | — | Hello Interview | ⬜ Todo | — |
+| 5 | Caching | [caching.md](caching.md) | Hello Interview | ✅ Complete | ~7.9/10 |
 | 6 | Sharding | — | Hello Interview | ⬜ Todo | — |
 | 7 | Consistent Hashing | — | Hello Interview | ⬜ Todo | — |
 | 8 | CAP Theorem | — | Hello Interview | ⬜ Todo | — |

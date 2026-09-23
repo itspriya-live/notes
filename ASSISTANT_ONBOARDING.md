@@ -118,8 +118,8 @@ Source: Hello Interview "System Design in a Hurry" → the **Foundations** seque
 | 2 | API Design | ✅ Complete | `system-design/api-design.md` | ~7.5/10 |
 | 3 | Data Modeling | ✅ Complete | `system-design/data-modeling.md` | ~6.8/10 |
 | 4 | Database Indexing | ✅ Complete | `system-design/database-indexing.md` | ~7.3/10 |
-| 5 | Caching | ⬜ Next | — | — |
-| 6 | Sharding | ⬜ Todo | — | — |
+| 5 | Caching | ✅ Complete | `system-design/caching.md` | ~7.9/10 |
+| 6 | Sharding | ⬜ Next | — | — |
 | 7 | Consistent Hashing | ⬜ Todo | — | — |
 | 8 | CAP Theorem | ⬜ Todo | — | — |
 | 9 | Numbers to Know | ⬜ Todo | — | — |
@@ -129,6 +129,7 @@ Source: Hello Interview "System Design in a Hurry" → the **Foundations** seque
 - API Design: nested-path-vs-query rule (required→path, optional→query), REST verbs-in-path, pagination page-size cap, PATCH set-vs-accumulate idempotency, GraphQL N+1 + DataLoader.
 - Data Modeling: system-generated PK = *stability* not just uniqueness, 1:1 → merge tables, composite-index (filter col first, sort col second), shard-key cost (cross-shard timelines), time-range = hot-shard anti-pattern.
 - Database Indexing: **LSM read mechanisms by name** (bloom filters + compaction); **B-tree updates in place = good / LSM append-only = bad** for repeated same-row updates (don't reverse); **delete = a write → disk goes up; tombstone problem is a *read* cost**; **selectivity (query) vs cardinality (column)** — partial index for skew; answer *every* sub-part + write the exact index.
+- Caching: **answer every sub-part** (recurring — left the cache-aside race + delete-vs-update blank); **location (client/CDN/in-process/external) ≠ pattern (cache-aside/write-through/write-back)**; keep the **three problems distinct** — stampede (key expires) vs hot key (one key overloads its shard) vs node-crash (all gone → *load-bearing?*); **write-through = atomicity/latency, write-back = data-loss** (don't swap); name **CDN purge/invalidation** + **fingerprinted filenames**; **TTL = tolerable staleness**; **immutable data kills invalidation AND the hot-key problem**.
 - Terminology I once slipped on: **graph database (nodes/edges storage) ≠ GraphQL (API query language)**.
 
 **Related study (not in this repo, for context):** I completed the Amazon Dynamo paper (SOSP 2007) and am partway through the Cassandra paper (LADIS 2009). Cross-reference these when relevant.
